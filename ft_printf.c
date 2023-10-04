@@ -6,13 +6,13 @@
 /*   By: yxu <yxu@student.42tokyo.jp>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:48:40 by yxu               #+#    #+#             */
-/*   Updated: 2023/10/04 11:21:18 by yxu              ###   ########.fr       */
+/*   Updated: 2023/10/04 13:03:59 by yxu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print1f(va_list ap, char c)
+static int	ft_print1f(va_list ap, char c)
 {
 	int	n;
 
@@ -65,12 +65,12 @@ int	ft_printf(const char *str, ...)
 // #include <limits.h>
 // int	main()
 // {
-// 	char	*p = "Badsfjhasd12345";
+// 	// char	*p = "Badsfjhasd12345";
 
 // 	printf("return: %d\n",
 // 		printf("   printf: c: %c s: %s i: %i d: %d p: %p u: %u X: %X %% ",
-// 			126, p, INT_MAX, INT_MIN, p, -1, -1));
+// 			126, NULL, INT_MAX, INT_MIN, (void *)ULONG_MAX, -1, -1));
 // 	printf("return: %d\n",
 // 		ft_printf("ft_printf: c: %c s: %s i: %i d: %d p: %p u: %u X: %X %% ",
-// 			126, p, INT_MAX, INT_MIN, p, -1, -1));
+// 			126, NULL, INT_MAX, INT_MIN, (void *)ULONG_MAX, -1, -1));
 // }

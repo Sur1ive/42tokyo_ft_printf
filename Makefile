@@ -1,4 +1,4 @@
-SRCS	= ft_printf.c ft_putstr.c ft_putnbr.c ft_strlen.c
+SRCS	= ft_printf.c ft_putstr.c ft_putnbr.c ft_strlen.c ft_putp.c
 OBJS	= $(SRCS:.c=.o)
 NAME	= libftprintf.a
 CC		= cc -Wall -Wextra -Werror

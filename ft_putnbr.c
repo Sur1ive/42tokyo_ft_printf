@@ -6,7 +6,7 @@
 /*   By: yxu <yxu@student.42tokyo.jp>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 15:44:11 by yxu               #+#    #+#             */
-/*   Updated: 2023/10/04 11:17:50 by yxu              ###   ########.fr       */
+/*   Updated: 2023/10/04 13:01:08 by yxu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_write_num(long int num, char *base, int n)
 	write(1, &base[num % n], 1);
 }
 
-static size_t	ft_numlen(long num, int n)
+static size_t	ft_numlen(unsigned long num, size_t n)
 {
 	if (num >= n)
 		return (ft_numlen(num / n, n) + 1);
@@ -54,9 +54,13 @@ int	ft_putunbr_base(unsigned int num, char *base)
 	return (ft_numlen(num, n));
 }
 
-int	ft_putp(void *p)
+int	ft_putulnbr_base(unsigned long num, char *base)
 {
-	write(1, "0x", 2);
-	return (2 + ft_putnbr_base(((unsigned long long)p) / 16, "0123456789abcdef")
-		+ ft_putnbr_base(((unsigned long long)p) % 16, "0123456789abcdef"));
+	size_t	n;
+
+	n = ft_strlen(base);
+	if (num >= n)
+		ft_putulnbr_base(num / n, base);
+	write(1, &base[num % n], 1);
+	return (ft_numlen(num, n));
 }
