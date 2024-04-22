@@ -1,4 +1,4 @@
-![]([./42.png](https://github.com/Sur1ive/42tokyo_piscine/blob/master/42.png))
+![](https://github.com/Sur1ive/42tokyo_piscine/blob/master/42.png)
 # ft_printf
 **Final grade: 100%**:white_check_mark:</br>
 
